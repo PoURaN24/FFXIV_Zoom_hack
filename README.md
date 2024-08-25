@@ -1,4 +1,4 @@
-# FFXIV Zoom hack, aka Heap Memory Search and Replace Tool :D
+# FFXIV Zoom hack - Heap Memory Search and Replace Tool 😁
 
 This program is a Windows-based tool designed to search for a specific DWORD value within the heap memory of a target process and replace it with another DWORD value. The tool leverages the Windows API to access process memory and modify it as needed.
 
@@ -23,12 +23,18 @@ This approach is designed to modify memory regions where the float value corresp
 
 - Windows OS
 - Administrator privileges (for enabling `SeDebugPrivilege`)
-- Visual Studio or any other C compiler for Windows
+- Microsoft's cl or any other C compiler for Windows
 
 ## Compilation
 
-You can compile the program using a C compiler like Visual Studio. Here's how you can do it using the Visual Studio Developer Command Prompt:
+You can compile the program using a C compiler like Visual Studio. Here's how you can do it using cl in windows command prompt:
 
+Locate the folder of the command line cl environment batch file "vcvarsall.bat" and execute it
+```sh
+vcvarsall.bat
+```
+
+Now you are ready to compile the source code:
 ```sh
 cl heap.c advapi32.lib
 ```
@@ -42,7 +48,7 @@ Example output:
 ffxiv_dx11.exe               18672 Console                    1  2,780,004 K
 ```
 
-Now use the heap tool on that process:
+Now use the heap tool on that process (from a privileged cmd window):
 ```sh
 heap 18672
 ```
