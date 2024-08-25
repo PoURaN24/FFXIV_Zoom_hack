@@ -1,4 +1,4 @@
-# FFXIV Zoom hack - Heap Memory Search and Replace Tool 😁
+# FFXIV Zoom hack - Final Fantasy XIV Heap Memory Search and Replace Tool 😁
 
 This program is a Windows-based tool designed to search for a specific DWORD value within the heap memory of a target process and replace it with another DWORD value. The tool leverages the Windows API to access process memory and modify it as needed.
 
